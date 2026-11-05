@@ -1,0 +1,71 @@
+/* Base styles for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #121214; /* Optional: background color */
+}
+
+img {
+    width: 100vmin;
+    height: 100vmin;
+    object-fit: contain;
+}/* The Anchor wrapper positioned in the top-left */
+
+a {
+    position: absolute;
+    top: 2.5vh;  /* Scales distance from top relative to screen height */
+    left: 2.5vw; /* Scales distance from left relative to screen width */
+    text-decoration: none;
+    z-index: 10; /* Ensures it sits firmly on top of the canvas background */
+}
+
+/* The Back Button */
+.top-left-button {
+    /* Fluid sizing based on viewport, capped with max-width/height so it stays sleek on desktop */
+    width: 8vw;
+    height: 8vw;
+    max-width: 55px;
+    max-height: 55px;
+    min-width: 40px;
+    min-height: 40px;
+
+    /* Centering the arrow text inside the square button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Text size scales with the viewport height, but caps nicely */
+    font-size: calc(1.5vh + 1vw); 
+    font-weight: 700;
+    color: #ffffff;
+    
+    /* Elegant Dark Glassmorphic Theme matching the main menu */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px; /* Smooth rounded square */
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    
+    /* Smooth transition for hover effects */
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover and Press Animations */
+.top-left-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: scale(1.05); /* Soft bounce instead of moving the position */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.08);
+}
+
+.top-left-button:active {
+    transform: scale(0.95);
+}

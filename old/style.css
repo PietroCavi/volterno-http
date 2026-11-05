@@ -1,0 +1,60 @@
+/* Reset and center everything on the screen */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #121214, #1a1a2e);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Style the <h1> title */
+h1 {
+    font-size: 8vw; /* Scales directly with the width of the screen */
+    margin-bottom: 5vh; /* Responsive vertical spacing */
+    letter-spacing: 2px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure the anchor tags stack cleanly */
+a {
+    display: block;
+    width: 100%;
+    max-width: 50vw; /* Keeps buttons from getting absurdly wide on desktop */
+    margin-bottom: 2.5vh; /* Responsive vertical gap between buttons */
+    text-decoration: none;
+}
+
+/* Style the buttons to look modern and fill their wrappers */
+button {
+    width: 100%;
+    padding: 2.5vh 0; /* Vertical padding scales with screen height */
+    font-size: 3.5vh;  /* Text scales smoothly with screen height */
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    cursor: pointer;
+    backdrop-filter: blur(8px); /* Classy glass effect */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth hover and focus animations */
+button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 40px rgba(255, 255, 255, 0.05);
+}
+
+button:active {
+    transform: translateY(1px);
+}
