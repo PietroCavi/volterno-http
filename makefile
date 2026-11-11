@@ -6,9 +6,12 @@ SOURCE_DIR := ./src
 OUTPUT_DIR := ./build
 
 SOURCE_FILES = $(SOURCE_DIR)/main.c
+SOURCE_FILES += $(SOURCE_DIR)/volterno_http.c
 SOURCE_FILES += $(SOURCE_DIR)/timerino/timerino.c
 
 CFLAGS += -O3
+CFLAGS += -Wall
+CFLAGS += -Wextra
 CFLAGS += -I$(SOURCE_DIR)
 
 #LDFLAGS += -lm
