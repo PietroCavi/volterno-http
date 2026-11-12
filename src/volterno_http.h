@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __VOLTERNO_HTTP_CAVI__
+#define __VOLTERNO_HTTP_CAVI__
 
 #include <stdlib.h>
 #include <sys/socket.h>
@@ -45,3 +46,5 @@ void send_error(int sock, const char *status_line);
 void throw_error(char* error_msg);
 
 void log_error(char* error_msg);
+
+#endif

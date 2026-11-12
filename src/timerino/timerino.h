@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __TIMERINO_CAVI__
+#define __TIMERINO_CAVI__
 
 #include <time.h>
 
@@ -21,3 +22,5 @@ typedef struct{
 void start_timerone(timerone* stopwatch);
 void stop_timerone(timerone* stopwatch);
 double get_timerone(timerone* stopwatch, char* format);
+
+#endif
