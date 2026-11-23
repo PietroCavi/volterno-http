@@ -8,7 +8,8 @@
 #include <errno.h>
 #include <stdio.h>
 
-#include "timerino/timerino.h"
+#include "../timerino/timerino.h"
+#include "../resources/resources.h"
 
 #ifndef PORT
     #define PORT 8080
