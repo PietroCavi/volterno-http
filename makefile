@@ -8,6 +8,8 @@ OUTPUT_DIR := ./build
 SOURCE_FILES = $(SOURCE_DIR)/main.c
 SOURCE_FILES += $(SOURCE_DIR)/volterno_http/volterno_http.c
 SOURCE_FILES += $(SOURCE_DIR)/resources/resources.c
+SOURCE_FILES += $(SOURCE_DIR)/resources/resources_functions.c
+SOURCE_FILES += $(SOURCE_DIR)/functions/functions.c
 SOURCE_FILES += $(SOURCE_DIR)/timerino/timerino.c
 
 CFLAGS += -O3

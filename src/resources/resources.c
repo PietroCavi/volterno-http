@@ -1,7 +1,5 @@
 #include "resources.h"
 
-http_resource base = {0};
-
 size_t get_resources_len = 0;
 size_t post_resources_len = 0;
 size_t delete_resources_len = 0;

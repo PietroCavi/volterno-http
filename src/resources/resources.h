@@ -2,6 +2,9 @@
 #define __RESOURCES_CAVI__
 
 #include <stddef.h>
+#include <string.h>
+
+#include "../functions/functions.h"
 
 typedef enum{
     DONE
@@ -25,7 +28,6 @@ extern size_t delete_dir_resources_len;
 extern size_t put_dir_resources_len;
 extern size_t patch_dir_resources_len;
 
-extern http_resource base;
 extern http_resource get_resources[];
 extern http_resource post_resources[];
 extern http_resource delete_resources[];
@@ -37,5 +39,11 @@ extern http_resource post_dir_resources[];
 extern http_resource delete_dir_resources[];
 extern http_resource put_dir_resources[];
 extern http_resource patch_dir_resources[];
+
+int get_get_resource(char* path);
+int get_post_resource(char* path);
+int get_delete_resource(char* path);
+int get_put_resource(char* path);
+int get_patch_resource(char* path);
 
 #endif
