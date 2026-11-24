@@ -59,3 +59,63 @@ int get_patch_resource(char* path){
 
     return index;
 }
+
+int get_get_dir_resource(char* path){
+    int index = -1;
+    
+    for(size_t i=0;i<get_dir_resources_len;i++){
+        if(strstr(get_dir_resources[i].server_path,path)==0){
+            index = i;
+        }
+    }
+
+    return index;
+}
+
+int get_post_dir_resource(char* path){
+    int index = -1;
+    
+    for(size_t i=0;i<post_dir_resources_len;i++){
+        if(strstr(post_dir_resources[i].server_path,path)==0){
+            index = i;
+        }
+    }
+
+    return index;
+}
+
+int get_delete_dir_resource(char* path){
+    int index = -1;
+    
+    for(size_t i=0;i<delete_dir_resources_len;i++){
+        if(strstr(delete_dir_resources[i].server_path,path)==0){
+            index = i;
+        }
+    }
+
+    return index;
+}
+
+int get_put_dir_resource(char* path){
+    int index = -1;
+    
+    for(size_t i=0;i<put_dir_resources_len;i++){
+        if(strstr(put_dir_resources[i].server_path,path)==0){
+            index = i;
+        }
+    }
+
+    return index;
+}
+
+int get_patch_dir_resource(char* path){
+    int index = -1;
+    
+    for(size_t i=0;i<patch_dir_resources_len;i++){
+        if(strstr(patch_dir_resources[i].server_path,path)==0){
+            index = i;
+        }
+    }
+
+    return index;
+}
